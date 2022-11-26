@@ -1,46 +1,56 @@
-print ("Coded By Sumalya Chatterjee")
-
+import sys,time
+def slowprint(s):
+    for c in s + '\n' :
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(10. / 100)
 running = True 
 
 while running:
-    print ("1 = Addition")
-    print ("2 = Subtraction")
-    print ("3 = Multiplication")
-    print ("4 = Division")
-    print ("5 = Exit program")
-    cmd = int(input("HULK order to Enter number : "))
+    slowprint ("\033[95m 1 = Addition")
+    slowprint ("\033[95m 2 = Subtraction")
+    slowprint ("\033[95m 3 = Multiplication")
+    slowprint ("\033[95m 4 = Division")
+    slowprint ("\033[95m 5 = Exit program")
+    cmd = int(input("\033[92m [*] Choose Option : "))
     if cmd == 1:
-        print ("Addition")
-        first = int(input("HULK wants to know first number :"))
-        second = int(input("HULK wants to know second number :"))
+        slowprint ("\n Addition")
+        print("================================")
+        first = int(input(" [+] Enter first number : "))
+        second = int(input(" [*] Enter second number : "))
         result = first + second
-        print (" ")
-        print("OH! It's easy for HULK to calculate")
-        print (first," + ",second," = ",result)
+        slowprint("\n\033[93m OH! It's easy for HULK to calculate")
+        print (" The Result Is ",first," + ",second," = ",result)
         print (" ")
     elif cmd == 2:
-        print ("Subtraction")
-        first = int(input("Enter first number :"))
-        second = int(input("Enter second number :"))
+        slowprint ("\n Subtraction")
+        print("================================")
+        first = int(input(" [*] Enter first number : "))
+        second = int(input(" [*] Enter second number : "))
         result = first - second
-        print("OH! It's easy for HULK to calculate")
-        print (first," - ",second," = ",result)
+        slowprint("\n\033[93m OH! It's easy for HULK to calculate")
+        print (" The Result Is ",first," - ",second," = ",result)
+        print (" ")
     elif cmd == 3:
-        print ("Multiplication")
-        first = int(input("Enter first number :"))
-        second = int(input("Enter second number :"))
+        slowprint ("\n Multiplication")
+        print("================================")
+        first = int(input(" [*] Enter first number : "))
+        second = int(input(" [*] Enter second number : "))
         result = first * second
-        print("OH! It's easy for HULK to calculate")
-        print (first," x ",second," = ",result)
+        slowprint("\n\033[93m OH! It's easy for HULK to calculate")
+        print (" The Result Is ",first," x ",second," = ",result)
+        print (" ")
     elif cmd == 4:
-        print ("Division")
-        first = int(input("Enter first number :"))
-        second = int(input("Enter second number :"))
-        print("OH! It's easy for HULK to calculate")
+        slowprint ("\n Division")
+        print("================================")
+        first = int(input(" [*] Enter first number : "))
+        second = int(input(" [*] Enter second number : "))
+        slowprint("\n\033[93m OH! It's easy for HULK to calculate")
         result = first / second
-        print (first," : ",second," = ",result)
+        print (" The Result Is ",first," : ",second," = ",result)
+        print (" ")
     elif cmd == 5:
-        print( "HULK offers you a good bye :D")
+        slowprint( " ***HULK offers you a good bye :D***")
         running = False
     else:
-        print('Are YOU OUT OF YOUR MIND? Huh!')
+        slowprint(' Are YOU OUT OF YOUR MIND? Huh!')
